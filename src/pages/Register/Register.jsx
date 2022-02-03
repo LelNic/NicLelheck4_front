@@ -1,29 +1,28 @@
 import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [birthdate, setBirthdate] = useState("");
+  const [birthdate, setBithdate] = useState("");
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("");
+
   const deleteMessage = () => {
     setMessage("");
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === verifyPassword) {
       axios.post("http://localhost:5000/security/register", {
-        firstname: firstName,
-        lastname: lastName,
+        pseudo: pseudo,
         email: email,
         password: password,
-        phone: phone,
         birthdate: birthdate,
       });
       setMessageType("success");
@@ -35,17 +34,20 @@ const Register = () => {
       setTimeout(deleteMessage, 5000);
     }
   };
+  console.log(email, password, birthdate, pseudo);
   return (
     <div className="Register">
       <h1>Inscription</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Prénom" onChange={(e) => setFirstName(e.target.value)} />
-        <input type="text" placeholder="Nom de famille" onChange={(e) => setLastName(e.target.value)} />
+        <input type="text" placeholder="Pseudo" onChange={(e) => setPseudo(e.target.value)} />
         <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
         <input type="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)} />
         <input type="password" placeholder="Vérifier le mot de passe" onChange={(e) => setVerifyPassword(e.target.value)} />
         <input type="date" placeholder="Date de naissance" onChange={(e) => setBithdate(e.target.value)} />
         <button type="submit">Inscription</button>
+        <Link to="/" className="button">
+          home
+        </Link>
       </form>
       {message !== "" ? <div className={`created ${messageType}`}>{message}</div> : ""}
     </div>

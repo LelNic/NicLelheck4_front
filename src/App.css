@@ -1,38 +1,172 @@
-.App {
+/*
+1. Variables
+2. RESET
+3. Blocks
+4. Inline
+5. ID
+6. Classes
+*/
+
+/* Variables */
+
+:root {
+  --body: rgb(0, 0, 0);
+  --secondary: #1d580b;
+  --third: #97673f;
+  --valid: #fafafa;
+  --alert: #fcff4d;
+  --font: "Roboto", sans-serif;
+  --titleFont: "Alata", sans-serif;
+  --subTitleFont: "Dosis", sans-serif;
+}
+
+/* 2 RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
+/* 3 Block */
+
+body {
+  background-image: url("../src/asset/wallpaper.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+main {
+  width: 100vw;
+}
+
+section {
   min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+  height: 5vh;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 2vh;
+  font-size: 3vh;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+textarea {
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background: none;
 }
+
+/* 4 inline */
+
+a {
+  color: var(--secondary);
+}
+
+h1 {
+  font-family: var(--titleFont);
+  font-size: 7vh;
+  color: var(--third);
+}
+
+h2 {
+  font-family: var(--navFont);
+  font-size: 3.5vh;
+  text-transform: uppercase;
+  color: var(--third);
+}
+
+p {
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+button {
+  border: 0;
+  border-radius: 0.25rem;
+  background: var(--alert);
+  color: var(--body);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+/* 5 ID */
+/* 6 Classes */
+
+/* Animation */
