@@ -53,8 +53,8 @@ const Register = () => {
         <Link to="/" className="button">
           home
         </Link>
+        {message !== "" ? <div className={`created ${messageType}`}>{message}</div> : ""}
       </form>
-      {message !== "" ? <div className={`created ${messageType}`}>{message}</div> : ""}
     </div>
   );
 };
