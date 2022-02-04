@@ -1,4 +1,6 @@
 form {
+  background-color: bisque;
+  opacity: 0.8;
   height: 50vh;
   width: 90%;
   display: flex;

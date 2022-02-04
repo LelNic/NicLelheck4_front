@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home.jsx";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Register from "./pages/Register/Register";
+import Armure from "./pages/armureAssister/ArmureAssister";
 import "./App.css";
 
 const App = () => {
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/user" element={<ProtectedRoute />}>
               <Route path="profile" element={<Profile />} />
+              <Route path="armure" element={<Armure />} />
             </Route>
           </Routes>
         </main>

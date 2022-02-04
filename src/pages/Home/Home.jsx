@@ -10,18 +10,27 @@ const Home = () => {
 
       <Link to="login">
         se connecter
-        <img src={"https://www.clipartmax.com/png/full/67-679735_cory-diers-vault-boy-with-pip-boy.png"} className="img" />
-      </Link>
-      <Link to="register">
-        s'enregistre
         <img
-          src={"https://www.clipartmax.com/png/full/115-1159059_vault-boy-sticker-joan-cornella-vault-boy.png"}
+          src={"https://www.clipartmax.com/png/full/67-679735_cory-diers-vault-boy-with-pip-boy.png"}
           className="img"
+          alt="icon"
         />
       </Link>
       <Link to="register">
+        inscription
+        <img
+          src={"https://www.clipartmax.com/png/full/115-1159059_vault-boy-sticker-joan-cornella-vault-boy.png"}
+          className="img"
+          alt="icon"
+        />
+      </Link>
+      <Link to="armure">
         info Armure Assister
-        <img src={"https://raw.githubusercontent.com/royxue/Power-Armor/master/misc/power_armor.png"} className="img" />
+        <img
+          src={"https://raw.githubusercontent.com/royxue/Power-Armor/master/misc/power_armor.png"}
+          className="img"
+          alt="icon"
+        />
       </Link>
     </div>
   );
