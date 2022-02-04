@@ -39,11 +39,16 @@ const Register = () => {
     <div className="Register">
       <h1>Inscription</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Pseudo" onChange={(e) => setPseudo(e.target.value)} />
-        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)} />
-        <input type="password" placeholder="Vérifier le mot de passe" onChange={(e) => setVerifyPassword(e.target.value)} />
-        <input type="date" placeholder="Date de naissance" onChange={(e) => setBithdate(e.target.value)} />
+        <input type="text" placeholder="Pseudo" onChange={(e) => setPseudo(e.target.value)} required />
+        <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} required />
+        <input type="password" placeholder="Mot de passe" onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="password"
+          placeholder="Vérifier le mot de passe"
+          onChange={(e) => setVerifyPassword(e.target.value)}
+          required
+        />
+        <input type="date" placeholder="Date de naissance" onChange={(e) => setBithdate(e.target.value)} required />
         <button type="submit">Inscription</button>
         <Link to="/" className="button">
           home

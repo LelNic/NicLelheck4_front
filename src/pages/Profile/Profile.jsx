@@ -20,14 +20,13 @@ const Profile = () => {
     <div className="profile">
       <h2>Profil de : {userInfos?.firstname + " " + userInfos?.lastname}</h2>
 
-      <h3>Modifier Infos</h3>
       <input type="text" placeholder="email" value={userInfos?.email} />
       <input type="password" placeholder="password" />
 
       <h3>Infos facultative</h3>
+      <p>information relative a votre compte</p>
 
       <p>{userInfos?.email}</p>
-      
     </div>
   );
 };
